@@ -246,6 +246,6 @@ opencv_num_threads = 0
 mp_start_method = 'fork'
 auto_scale_lr = dict(enable=False, base_batch_size=16)
 device = 'cuda'
-work_dir = './tutorial_exps'
+work_dir = './train_dump'
 seed = 0
 gpu_ids = range(0, 1)

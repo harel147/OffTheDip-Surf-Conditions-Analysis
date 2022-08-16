@@ -35,7 +35,7 @@ cfg.model.roi_head.bbox_head.num_classes = 2
 cfg.load_from = 'checkpoints/faster_rcnn_r50_caffe_fpn_mstrain_3x_coco_20210526_095054-1f77628b.pth'
 
 # Set up working dir to save files and logs.
-cfg.work_dir = './tutorial_exps'
+cfg.work_dir = './train_dump'
 
 # The original learning rate (LR) is set for 8-GPU training.
 # We divide it by 8 since we only use one GPU.
@@ -101,5 +101,5 @@ cfg.log_config.hooks = [
 print(f'Config:\n{cfg.pretty_text}')
 
 # save the config as a .py file so we could use it later for inference
-dump_file = 'tutorial_exps/my_config.py'
+dump_file = 'train_dump/my_config.py'
 cfg.dump(dump_file)

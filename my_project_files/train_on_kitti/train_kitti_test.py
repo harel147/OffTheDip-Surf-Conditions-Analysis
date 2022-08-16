@@ -94,7 +94,7 @@ cfg.model.roi_head.bbox_head.num_classes = 3
 cfg.load_from = 'checkpoints/faster_rcnn_r50_caffe_fpn_mstrain_3x_coco_20210526_095054-1f77628b.pth'
 
 # Set up working dir to save files and logs.
-cfg.work_dir = './tutorial_exps'
+cfg.work_dir = './train_dump'
 
 # The original learning rate (LR) is set for 8-GPU training.
 # We divide it by 8 since we only use one GPU.
