@@ -21,7 +21,10 @@ def parse_video(video, architecture_config, checkpoints, result_path='', show=Fa
 
     for frame in mmcv.track_iter_progress(video_reader):
         result = inference_detector(model, frame)
-        frame = model.show_result(frame, result, score_thr=score_thr)
+        PALETTE = [
+            (255, 0, 0),  # blue
+            (0, 255, 0)]  # green
+        frame = model.show_result(frame, result, score_thr=score_thr, bbox_color=PALETTE, text_color=PALETTE)
         if show:
             cv2.namedWindow('video', 0)
             mmcv.imshow(frame, 'video', int(wait_time))

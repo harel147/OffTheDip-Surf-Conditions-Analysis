@@ -26,12 +26,12 @@ model.show_result(img, result, out_file='my_project_files/data_for_inference/out
 
 # Let's try inference a video
 parse_video(
-    #video='my_project_files/data_for_inference/out_4_resized_video_from_after_labeling.mp4',
+    video='my_project_files/data_for_inference/out_4_resized_video_from_after_labeling.mp4',
     #video='my_project_files/data_for_inference/out_4_resized_video.mp4',
     #video='my_project_files/data_for_inference/3.mp4',
-    video='my_project_files/data_for_inference/out_not_in_dataset_vid2_resized_video.mp4',
+    #video='my_project_files/data_for_inference/out_not_in_dataset_vid_resized_video.mp4',
     architecture_config='tutorial_exps/my_config.py',
     checkpoints='tutorial_exps/latest.pth',
-    result_path='my_project_files/data_for_inference/output/out_not_in_dataset2_res.mp4',
+    result_path='my_project_files/data_for_inference/output/video_4_after_labeling_res.mp4',
     show=True,  # uncomment to show video inference live
 )
