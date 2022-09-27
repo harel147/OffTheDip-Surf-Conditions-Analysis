@@ -6,6 +6,7 @@ from mmdet.models import build_detector
 from modify_config_to_offTheDip_dataset import cfg as config
 from my_inference_video_module import parse_video
 
+#check
 checkpoint = 'train_dump/latest.pth'  # Setup a checkpoint file to load
 device='cuda:0'  # Set the device to be used for evaluation
 config.model.pretrained = None  # Set pretrained to be None since we do not need pretrained model here
