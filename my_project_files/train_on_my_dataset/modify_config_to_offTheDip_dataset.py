@@ -29,7 +29,7 @@ cfg.device = 'cuda'
 #cfg.model.eval()  # Convert the model into evaluation mode
 
 # modify num classes of the model in box head
-cfg.model.roi_head.bbox_head.num_classes = 2
+cfg.model.roi_head.bbox_head.num_classes = 3
 # If we need to finetune a model based on a pre-trained detector, we need to
 # use load_from to set the path of checkpoints.
 cfg.load_from = 'checkpoints/faster_rcnn_r50_caffe_fpn_mstrain_3x_coco_20210526_095054-1f77628b.pth'

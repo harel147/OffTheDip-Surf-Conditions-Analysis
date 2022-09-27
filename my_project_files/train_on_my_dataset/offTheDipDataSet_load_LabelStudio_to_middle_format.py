@@ -14,11 +14,11 @@ IMAGE_HEIGHT = 720
 @DATASETS.register_module()
 class OffTheDipDataset(CustomDataset):
 
-    CLASSES = ('sitting', 'standing')
+    CLASSES = ('sitting', 'standing', 'pocket')
     #CLASSES = ('person',)
 
-    studio_label_ann = ['my_project_files/data_training/labels/3.json',
-                        'my_project_files/data_training/labels/4_1470_last_frame.json',
+    studio_label_ann = ['my_project_files/data_training/labels/3_with_pocket.json',
+                        'my_project_files/data_training/labels/4_1470_last_frame_with_pocket.json',
                         ]
     studio_label_prefix = ['',
                            '40000',
@@ -54,8 +54,10 @@ class OffTheDipDataset(CustomDataset):
                         data_info["ann"]["bboxes"].append(bboxes)
                         if obj_label == 'sitting':
                             data_info["ann"]["labels"].append(0)
-                        else:  # standing
+                        elif obj_label == 'standing':
                             data_info["ann"]["labels"].append(1)
+                        else:  # pocket
+                            data_info["ann"]["labels"].append(2)
                         data_infos.append(data_info)
 
                     else:
@@ -65,8 +67,10 @@ class OffTheDipDataset(CustomDataset):
                                 d["ann"]["bboxes"].append(bboxes)
                                 if obj_label == 'sitting':
                                     d["ann"]["labels"].append(0)
-                                else:  # standing
+                                elif obj_label == 'standing':
                                     d["ann"]["labels"].append(1)
+                                else:  # pocket
+                                    d["ann"]["labels"].append(2)
 
         for d in data_infos:
             d["ann"]["bboxes"] = np.array(d["ann"]["bboxes"], dtype=np.float32).reshape(-1, 4)
