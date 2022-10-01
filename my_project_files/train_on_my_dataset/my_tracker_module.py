@@ -39,7 +39,7 @@ class Tracks:
 
 
 standing_tracker = sort.Sort(max_age=15, min_hits=15, iou_threshold=0.1, factor=8)
-pocket_tracker = sort.Sort(max_age=10, min_hits=10, iou_threshold=0.1, factor=3)
+pocket_tracker = sort.Sort(max_age=15, min_hits=15, iou_threshold=0.1, factor=4)
 
 tracks = Tracks()
 
