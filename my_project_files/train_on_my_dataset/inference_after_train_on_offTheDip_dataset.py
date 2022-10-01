@@ -34,7 +34,7 @@ for vid in videos_to_infer:
         checkpoints='train_dump/latest.pth',
         #result_path='my_project_files/data_for_inference/output/video_4_after_labeling_with_pocket_res.mp4',
         result_path=f'/home/ubuntu/Downloads/output/out_{vid}_res.mp4',
-        show=True,  # uncomment to show video inference live
+        #show=True,  # uncomment to show video inference live
     )
 # parse_video(
 #         video='my_project_files/data_for_inference/out_4_resized_video_from_after_labeling.mp4',
