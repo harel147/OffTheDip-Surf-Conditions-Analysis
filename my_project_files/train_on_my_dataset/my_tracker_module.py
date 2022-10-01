@@ -31,6 +31,12 @@ class Tracks:
         self.frame_number = 0
         self.number_surfers_history = []
 
+    def reset_tracks(self):
+        self.standing_history = {}
+        self.pocket_history = {}
+        self.frame_number = 0
+        self.number_surfers_history = []
+
 
 standing_tracker = sort.Sort(max_age=15, min_hits=15, iou_threshold=0.1, factor=8)
 pocket_tracker = sort.Sort(max_age=10, min_hits=10, iou_threshold=0.1, factor=3)

@@ -11,6 +11,7 @@ def parse_video(video, architecture_config, checkpoints, result_path='', show=Fa
     assert result_path or show, ('Please specify at least one operation (save/show the video)')
 
     model = init_detector(architecture_config, checkpoints, device=device)
+    tracks.reset_tracks()
 
     video_reader = mmcv.VideoReader(video)
     video_writer = None
