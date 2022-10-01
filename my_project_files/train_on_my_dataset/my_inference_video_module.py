@@ -2,6 +2,7 @@ import cv2
 import mmcv
 
 from mmdet.apis import inference_detector, init_detector
+from my_tracker_module import *
 
 
 def parse_video(video, architecture_config, checkpoints, result_path='', show=False, wait_time=1.0, score_thr=0.3,
@@ -19,8 +20,14 @@ def parse_video(video, architecture_config, checkpoints, result_path='', show=Fa
             result_path, fourcc, video_reader.fps,
             (video_reader.width, video_reader.height))
 
+        tracker_result_path = result_path[0:-7]+"tracker_res.mp4"
+        tracker_video_writer = cv2.VideoWriter(
+            tracker_result_path, fourcc, video_reader.fps,
+            (video_reader.width, video_reader.height))
+
     for frame in mmcv.track_iter_progress(video_reader):
         result = inference_detector(model, frame)
+        update_trackers(frame, result, tracker_video_writer)
         PALETTE = [
             (255, 0, 0),  # red
             (0, 255, 0),  # green
@@ -34,5 +41,6 @@ def parse_video(video, architecture_config, checkpoints, result_path='', show=Fa
 
     if video_writer:
         video_writer.release()
+        tracker_video_writer.release()
     cv2.destroyAllWindows()
 
