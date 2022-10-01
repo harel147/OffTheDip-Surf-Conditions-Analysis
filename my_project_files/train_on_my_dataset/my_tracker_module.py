@@ -75,7 +75,7 @@ def calc_data_for_panel():
     LEGIT_TRACK_NUMBER_OF_FRAMES = 30
     panel_data = {"surfed_waves": 0, "unsurfed_waves": 0}
 
-    panel_data['avg_number_of_surfers'] = max_avoid_empty(tracks.number_surfers_history[-90])  # take max in the last 90 frames
+    panel_data['avg_number_of_surfers'] = max_avoid_empty(tracks.number_surfers_history[-90:])  # take max in the last 90 frames
     wave_surfer_ratio = []
     avg_wave_velocity = []
     for pocket in tracks.pocket_history.values():
