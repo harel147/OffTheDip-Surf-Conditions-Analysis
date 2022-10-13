@@ -184,3 +184,5 @@ def update_trackers(frame, detections, tracker_video_writer):
     frame = draw_panel(frame, panel_data)  # draw panel on frame
 
     tracker_video_writer.write(frame)
+
+    return panel_data

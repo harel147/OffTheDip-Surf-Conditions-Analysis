@@ -37,11 +37,11 @@ model.show_result(img, result, out_file='my_project_files/data_for_inference/out
 #         #show=True,  # uncomment to show video inference live
 #     )
 parse_video(
-        video='my_project_files/data_for_inference/more_videos_not_in_dataset_already_resized/more_vid_not_in_dataset_3.mp4',
+        video='my_project_files/data_for_inference/out_4_resized_video_from_after_labeling.mp4',
         #video=f'my_project_files/data_for_inference/{vid}.mp4',
         architecture_config='train_dump/my_config.py',
         checkpoints='train_dump/latest.pth',
-        result_path='my_project_files/data_for_inference/output/more_vid_not_in_dataset_3_res.mp4',
+        result_path='my_project_files/data_for_inference/output/test.mp4',
         #result_path=f'my_project_files/data_for_inference/output/out_{vid}_res.mp4',
         show=True,  # uncomment to show video inference live
     )

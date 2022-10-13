@@ -26,9 +26,10 @@ def parse_video(video, architecture_config, checkpoints, result_path='', show=Fa
             tracker_result_path, fourcc, video_reader.fps,
             (video_reader.width, video_reader.height))
 
+    panel_data = None
     for frame in mmcv.track_iter_progress(video_reader):
         result = inference_detector(model, frame)
-        update_trackers(frame, result, tracker_video_writer)
+        panel_data = update_trackers(frame, result, tracker_video_writer)
         PALETTE = [
             (255, 0, 0),  # red
             (0, 255, 0),  # green
@@ -44,4 +45,31 @@ def parse_video(video, architecture_config, checkpoints, result_path='', show=Fa
         video_writer.release()
         tracker_video_writer.release()
     cv2.destroyAllWindows()
+
+    summerize_session = "field,data\n"
+    summerize_surfers = "surfer track_id,data\n"
+    summerize_waves = "wave track_id,data\n"
+
+    for key, val in panel_data.items():
+        summerize_session += f"{key},{val}\n"
+    f = open("my_project_files/data_for_inference/output/summerize_session.csv", "w")
+    f.write(summerize_session)
+    f.close()
+
+    for key, val in tracks.standing_history.items():
+        val = str(val).replace(",", " ").split("]]  ")[1].split(")")[0]
+        summerize_surfers += f"{key},{val}\n"
+    f = open("my_project_files/data_for_inference/output/summerize_surfers.csv", "w")
+    f.write(summerize_surfers)
+    f.close()
+
+    for key, val in tracks.pocket_history.items():
+        val = str(val).replace(",", " ").split("]]  ")[1].split(")")[0]
+        summerize_waves += f"{key},{val}\n"
+    f = open("my_project_files/data_for_inference/output/summerize_waves.csv", "w")
+    f.write(summerize_waves)
+    f.close()
+
+
+
 
