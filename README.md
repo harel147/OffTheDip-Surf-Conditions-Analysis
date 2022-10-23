@@ -1,7 +1,7 @@
 # OffTheDip
 ## Surf Conditions Analysis Based on Computer Vision Algorithms
-### ________________ Detection _____________________________________________ Surfers & Waves Tracker ________________
-![detector](https://user-images.githubusercontent.com/63463677/197403593-57bcf942-475a-4c30-a9e4-8c2fc99812db.gif) ![tracker](https://user-images.githubusercontent.com/63463677/197403683-5e013b74-1843-40e1-b537-763a9338810c.gif)
+### _________ Detection ______________________ Surfers & Waves Tracker _________
+![detector1](https://user-images.githubusercontent.com/63463677/197405261-7e45d23e-e620-4593-b02f-2f28a2bded00.gif)  ![tracker1](https://user-images.githubusercontent.com/63463677/197405270-dbc57a2b-90c2-443d-94dc-554182450263.gif)
 
 
 ### Background
