@@ -1,7 +1,2 @@
 surfer track_id,data
-1,first_frame_number=1  last_frame_number=21  avg_velocity=5.5901699437494745  max_height=58  matched_pocket_id=2
-4,first_frame_number=40  last_frame_number=110  avg_velocity=1.0173996465579918  max_height=53  matched_pocket_id=7
-9,first_frame_number=181  last_frame_number=259  avg_velocity=2.0522834094336053  max_height=67  matched_pocket_id=5
-14,first_frame_number=283  last_frame_number=295  avg_velocity=1.3667682889047272  max_height=64  matched_pocket_id=5
-16,first_frame_number=341  last_frame_number=363  avg_velocity=4.0064514089855106  max_height=50  matched_pocket_id=-1
-17,first_frame_number=406  last_frame_number=599  avg_velocity=0.9388967040413021  max_height=66  matched_pocket_id=19
+1,first_frame_number=83  last_frame_number=100  avg_velocity=4.688940090206973  max_height=59  matched_pocket_id=2

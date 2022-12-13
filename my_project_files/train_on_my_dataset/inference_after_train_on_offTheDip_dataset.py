@@ -42,7 +42,8 @@ parse_video(
         #video=f'my_project_files/data_for_inference/{vid}.mp4',
         architecture_config='train_dump/my_config.py',
         checkpoints='train_dump/latest.pth',
-        result_path='my_project_files/data_for_inference/output/test_with_shoval.mp4',
+        result_path='my_project_files/data_for_inference/output/test_no_panel.mp4',
         #result_path=f'my_project_files/data_for_inference/output/out_{vid}_res.mp4',
         show=True,  # uncomment to show video inference live
+        number_of_frames=100,
     )

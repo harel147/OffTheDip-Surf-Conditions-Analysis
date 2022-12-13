@@ -1,8 +1,8 @@
 field,data
-surfed_waves,2
+surfed_waves,0
 unsurfed_waves,0
 avg_number_of_surfers,13
-avg_height_wave_surfer_ratio,2.734611742424242
-max_height_wave_surfer_ratio,2.984848484848485
-avg_wave_velocity[pixels/frames],0.6607005140692339
-avg_surfers_velocity[pixels/frames],1.3361932533442997
+avg_height_wave_surfer_ratio,0
+max_height_wave_surfer_ratio,0
+avg_wave_velocity[pixels/frames],0
+avg_surfers_velocity[pixels/frames],0

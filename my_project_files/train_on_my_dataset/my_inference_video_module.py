@@ -6,7 +6,7 @@ from my_tracker_module import *
 
 
 def parse_video(video, architecture_config, checkpoints, result_path='', show=False, wait_time=1.0, score_thr=0.3,
-                device='cuda:0'):
+                device='cuda:0', number_of_frames=None):
 
     assert result_path or show, ('Please specify at least one operation (save/show the video)')
 
@@ -27,7 +27,10 @@ def parse_video(video, architecture_config, checkpoints, result_path='', show=Fa
             (video_reader.width, video_reader.height))
 
     panel_data = None
-    for frame in mmcv.track_iter_progress(video_reader):
+    for i, frame in enumerate(mmcv.track_iter_progress(video_reader)):
+        if number_of_frames:
+            if number_of_frames == i:
+                break
         result = inference_detector(model, frame)
         panel_data = update_trackers(frame, result, tracker_video_writer)
         PALETTE = [

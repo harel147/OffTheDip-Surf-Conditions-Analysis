@@ -52,6 +52,7 @@ def draw_tracks(frame, standing_tracks, pocket_tracks):
 
         cv2.putText(frame, str(int(standing[4])), (int(standing[0]), int(standing[1])-8), font, 0.5, (0, 255, 0), 2, cv2.LINE_AA)
 
+       # draw track trace
         if int(standing[4]) in tracks.standing_history:
             for point in tracks.standing_history[int(standing[4])].locations:
                 cv2.rectangle(frame, (point[0], point[1]), (point[0]+2, point[1]+2),
@@ -62,10 +63,13 @@ def draw_tracks(frame, standing_tracks, pocket_tracks):
                       color=(255, 255, 0), thickness=2)
         cv2.putText(frame, str(int(pocket[4])), (int(pocket[0]), int(pocket[1])-8), font, 0.5, (255, 255, 0), 2, cv2.LINE_AA)
 
+        # draw track trace
+        """
         if int(pocket[4]) in tracks.pocket_history:
             for point in tracks.pocket_history[int(pocket[4])].locations:
                 cv2.rectangle(frame, (point[0], point[1]), (point[0]+2, point[1]+2),
                               color=(255, 255, 0), thickness=2)
+        """
 
     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     return frame
