@@ -38,12 +38,14 @@ model.show_result(img, result, out_file='my_project_files/data_for_inference/out
 #     )
 parse_video(
         #video='my_project_files/data_for_inference/out_4_resized_video_from_after_labeling.mp4',
-        video='my_project_files/data_for_inference/out_4_resized_video_full.mp4',
+        video='my_project_files/data_for_inference/3_full.mp4',
         #video=f'my_project_files/data_for_inference/{vid}.mp4',
         architecture_config='train_dump/my_config.py',
         checkpoints='train_dump/latest.pth',
         result_path='my_project_files/data_for_inference/output/test_no_panel.mp4',
         #result_path=f'my_project_files/data_for_inference/output/out_{vid}_res.mp4',
         show=True,  # uncomment to show video inference live
-        number_of_frames=100,
+        # number_of_frames=2400,
+        # start_frame=966,
+        #number_of_frames=1600,
     )

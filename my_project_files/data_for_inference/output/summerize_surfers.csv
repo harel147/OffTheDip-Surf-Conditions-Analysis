@@ -1,2 +1,17 @@
 surfer track_id,data
-1,first_frame_number=83  last_frame_number=100  avg_velocity=4.688940090206973  max_height=59  matched_pocket_id=2
+1,first_frame_number=3  last_frame_number=4  avg_velocity=2.0  max_height=22  matched_pocket_id=-1
+2,first_frame_number=12  last_frame_number=305  avg_velocity=1.663783144716411  max_height=26  matched_pocket_id=3
+7,first_frame_number=70  last_frame_number=83  avg_velocity=2.594942737451231  max_height=29  matched_pocket_id=3
+6,first_frame_number=129  last_frame_number=275  avg_velocity=1.3153716830862068  max_height=29  matched_pocket_id=5
+14,first_frame_number=407  last_frame_number=786  avg_velocity=0.6732421480199975  max_height=33  matched_pocket_id=18
+23,first_frame_number=694  last_frame_number=959  avg_velocity=1.92105494928998  max_height=29  matched_pocket_id=26
+33,first_frame_number=820  last_frame_number=864  avg_velocity=1.3674189960446659  max_height=29  matched_pocket_id=34
+42,first_frame_number=1050  last_frame_number=1944  avg_velocity=0.12389878982122385  max_height=41  matched_pocket_id=40
+53,first_frame_number=1397  last_frame_number=1444  avg_velocity=0.6554434808829516  max_height=35  matched_pocket_id=54
+60,first_frame_number=1616  last_frame_number=1734  avg_velocity=1.3932368344109882  max_height=36  matched_pocket_id=61
+69,first_frame_number=1834  last_frame_number=1925  avg_velocity=1.7741383032321043  max_height=35  matched_pocket_id=67
+76,first_frame_number=2010  last_frame_number=2337  avg_velocity=0.4200637268181719  max_height=43  matched_pocket_id=71
+81,first_frame_number=2177  last_frame_number=2310  avg_velocity=1.2364706803411558  max_height=43  matched_pocket_id=78
+82,first_frame_number=2183  last_frame_number=2257  avg_velocity=1.8005457333572188  max_height=38  matched_pocket_id=78
+88,first_frame_number=2325  last_frame_number=2368  avg_velocity=0.6465785476492021  max_height=35  matched_pocket_id=78
+92,first_frame_number=2453  last_frame_number=2566  avg_velocity=0.02798475805458743  max_height=55  matched_pocket_id=91

@@ -37,9 +37,14 @@ class Tracks:
         self.frame_number = 0
         self.number_surfers_history = []
 
-
+# video 4
 standing_tracker = sort.Sort(max_age=15, min_hits=15, iou_threshold=0.1, factor=8)
 pocket_tracker = sort.Sort(max_age=15, min_hits=15, iou_threshold=0.1, factor=4)
+
+# video 3
+# standing_tracker = sort.Sort(max_age=30, min_hits=15, iou_threshold=0.1, factor=32)
+# pocket_tracker = sort.Sort(max_age=15, min_hits=15, iou_threshold=0.1, factor=4)
+
 
 tracks = Tracks()
 
@@ -195,7 +200,7 @@ def update_trackers(frame, detections, tracker_video_writer):
 
     panel_data = calc_data_for_panel()
 
-    frame = draw_panel(frame, panel_data)  # draw panel on frame
+    #frame = draw_panel(frame, panel_data)  # draw panel on frame
 
     tracker_video_writer.write(frame)
 
