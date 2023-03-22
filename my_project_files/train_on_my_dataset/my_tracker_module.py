@@ -133,11 +133,17 @@ def draw_panel(frame, panel_data):
     return frame
 
 
-def update_trackers(frame, detections, tracker_video_writer):
+def update_trackers(frame, detections, tracker_video_writer, max_y_coordinate=10000):
     tracks.frame_number += 1
-    sitting_detections = np.array(detections[0])
-    standing_detections = np.array(detections[1])
-    pocket_detections = np.array(detections[2])
+    sitting_detections = [d for d in detections[0] if d[1] < max_y_coordinate]
+    sitting_detections = np.array(sitting_detections)
+    sitting_detections = sitting_detections.reshape(len(sitting_detections), 5)
+    standing_detections = [d for d in detections[1] if d[1] < max_y_coordinate]
+    standing_detections = np.array(standing_detections)
+    standing_detections = standing_detections.reshape(len(standing_detections), 5)
+    pocket_detections = [d for d in detections[2] if d[1] < max_y_coordinate]
+    pocket_detections = np.array(pocket_detections)
+    pocket_detections = pocket_detections.reshape(len(pocket_detections), 5)
     standing_tracks = standing_tracker.update(standing_detections)
     pocket_tracks = pocket_tracker.update(pocket_detections)
 

@@ -6,7 +6,7 @@ from my_tracker_module import *
 
 
 def parse_video(video, architecture_config, checkpoints, result_path='', show=False, wait_time=1.0, score_thr=0.3,
-                device='cuda:0', number_of_frames=None, start_frame=0):
+                device='cuda:0', number_of_frames=None, start_frame=0, max_y_coordinate=10000):
 
     assert result_path or show, ('Please specify at least one operation (save/show the video)')
 
@@ -34,7 +34,7 @@ def parse_video(video, architecture_config, checkpoints, result_path='', show=Fa
             if number_of_frames == i:
                 break
         result = inference_detector(model, frame)
-        panel_data = update_trackers(frame, result, tracker_video_writer)
+        panel_data = update_trackers(frame, result, tracker_video_writer, max_y_coordinate)
         PALETTE = [
             (255, 0, 0),  # red
             (0, 255, 0),  # green
